@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       color: Colors.white,
       title: 'Github API Search',
       theme: ThemeData(
+        unselectedWidgetColor: Colors.amber,
         fontFamily: Fonts.circularStd,
         textTheme: theme.textTheme.apply(
           fontFamily: Fonts.circularStd,
