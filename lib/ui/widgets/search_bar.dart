@@ -25,6 +25,11 @@ class SearchBar extends StatelessWidget {
           HSpacer(14),
           Expanded(
             child: TextFormField(
+              onFieldSubmitted: (String val) {
+                context.read<GithubBloc>().add(
+                    EventGithubInitial(query: val, page: 1, type: 'users'));
+              },
+              textInputAction: TextInputAction.search,
               decoration: InputDecoration(
                 isDense: true,
                 hintText: 'Search username, issue, repository',

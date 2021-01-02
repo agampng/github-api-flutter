@@ -1,9 +1,9 @@
 part of '../../pages.dart';
 
-class _HeaderAppBar extends StatelessWidget {
+class HeaderAppBar extends StatelessWidget {
   static const double heightFraction = 0.48;
 
-  const _HeaderAppBar({
+  const HeaderAppBar({
     @required this.height,
     @required this.showTitle,
   });
@@ -26,26 +26,6 @@ class _HeaderAppBar extends StatelessWidget {
           ButtonFilterBar(),
         ],
       ),
-    );
-  }
-
-  Widget _buildCategories(BuildContext context) {
-    return Expanded(
-      child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 28,
-            vertical: context.responsive(40),
-          ),
-          child: Column(
-            children: [
-              Row(
-                children: [],
-              ),
-              Row(
-                children: [],
-              )
-            ],
-          )),
     );
   }
 
@@ -80,7 +60,6 @@ class _HeaderAppBar extends StatelessWidget {
               SearchBar(),
               RadioBar(),
               ButtonFilterBar(),
-              // _buildCategories(context),
             ],
           ),
         ],

@@ -37,18 +37,18 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    appBarHeight = context.screenSize.height * _HeaderAppBar.heightFraction;
+    appBarHeight = context.screenSize.height * HeaderAppBar.heightFraction;
 
     return Scaffold(
       body: NestedScrollView(
         controller: _scrollController,
         headerSliverBuilder: (_, __) => [
-          _HeaderAppBar(
+          HeaderAppBar(
             height: appBarHeight,
             showTitle: showTitle,
           ),
         ],
-        body: _ListData(),
+        body: ListData(),
       ),
     );
   }
